@@ -1,91 +1,102 @@
-//Дан массив [1, 2, 3]. Добавьте ему в конец элементы 4, 5, 6. 
-let arr = [1, 2, 3];
-arr.push(4, 5, 6);
-console.log(arr);
+//Пользователь может заливать файлы с расширениями только jpg png. 
+//Если он залил правильный файл - 
+//вывести сообщение об успехе, если нет - об ошибке
 
-//Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6. 
-
-let arr2 = [1, 2, 3];
-arr2.unshift(4, 5, 6)
-console.log(arr2);
-
-//Дан массив ['js', 'css', 'jq']. Выведите на экран первый элемент. 
-
-let arr3 = ['js', 'css', 'jq'];
-console.log(arr3[0]);
-
-// Дан массив ['js', 'css', 'jq']. Выведите на экран последний элемент. 
-
-let arr4 = ['js', 'css', 'jq'];
-console.log(arr4[2]);
-
-//Дан массив [1, 2, 3, 4, 5]. 
-//С помощью метода slice запишите в новый элементы [1, 2, 3]. 
-
-let arr5 = [1, 2, 3, 4, 5];
-console.log(arr5.slice(0, 3));
-
-//Дан массив [1, 2, 3, 4, 5]. 
-//С помощью метода slice запишите в новый элементы [4, 5]. 
-
-let arr6 = [1, 2, 3, 4, 5];
-let arr7 = arr6.slice(-2);
-console.log(arr7);
-
-//Дан массив [1, 2, 3, 4, 5]. 
-//С помощью метода splice преобразуйте массив в [1, 4, 5].
-
-let arr8 = [1, 2, 3, 4, 5];
-arr8.splice(1, 2);
-console.log(arr8);
-
-//Используйте метод reduce в комбинации с concat 
-//для свёртки массива массивов в один массив, 
-//у которого есть все элементы входных массивов.
-
-var arrays = [[1, 2, 3], [4, 5], [6]]; 
-let a = arrays.reduce((num, item) => {
-    return num.concat(item);
-});
-console.log(a);
-
-//Дан массив [3, 4, 1, 2, 7]. Отсортируйте его не используя метод sort. 
-//Предпочтительный метод сортировки - пузырьком.
-
-let arr10 = [3, 4, 1, 2, 7]; 
-function bubbleSort(arr10) { 
-    var swapped;
-    do {
-        swapped = false; 
-        for (var i=0; i < arr10.length-1; i++) { 
-            if (arr10[i] > arr10[i+1]) {
-                var temp = arr10[i];
-                arr10[i] = arr10[i+1];
-                arr10[i+1] = temp;
-                swapped = true;
-            }
-        }
-    } while (swapped); //действует, пока переменная  swapped = true 
+function checkFile(name) {
+    let newstr = name.match(/\.[jpg png]/);
+    if(newstr == null) {
+        alert("Не верный формат картинки");
+    } else {
+        alert("Картинка загружена");
+    }
+  
 }
 
-bubbleSort(arr10);
-console.log(arr10);
+//страница может быть размещена на хостинге и 
+//начинаться с http или https. вне зависимости 
+//от этого ссылка в меню должна получать класс active
 
-//мой вариант задачи, 2 способ
-let array = [10, 4, 6, 8, 15, 1, 9];
-function bubbleSort (array) {
-    for(let i = 0; i <= array.length - 2; i++) { //повтор прохождений по массиву
-        for (let j = 0; j <= array.length - 2; j++) { //попарное сравнение элементов массива
-            if(array[j] > array[j + 1]) { //сравнение элементов
-               //меняем местами элементы
-                let swap = array[j]; 
-                array[j] = array[j + 1]; 
-                array[j + 1] = swap;
-            }
 
+
+//функция принимает параметром две строки, 
+//сравнить сколько букв в этих словах повторяются 
+//и в каком количестве.вывести как обьект
+
+function compStr (str1, str2) {
+    let obj = {};
+    let uniq1 = [];
+    for(char of str1) {
+        if(uniq1.indexOf(char) == -1) {
+            uniq1.push(char); 
         }
 
     }
+    let uniq2 = [];
+    for(char of str2) {
+        if(uniq2.indexOf(char) == -1) {
+            uniq2.push(char); 
+        }
+
+    }
+    for(char1 of uniq1) {
+        for(char2 of uniq2) {
+            if(char1 == char2) {
+                let num1 = str1.split(char1).length - 1;
+                let num2 = str2.split(char1).length - 1;
+                let obj2 = {};
+                obj2['str1'] = num1;
+                obj2['str2'] = num2;
+                obj[char1] = obj2;
+            } 
+            
+        }
+    }
+    
+    return obj;
 }
-bubbleSort(array);
-console.log(array);
+console.log(compStr("жаба", "мара"));
+
+//Дана строка из 3-х цифр. Найдите сумму этих цифр. 
+//То есть сложите как числа первый 
+//символ строки, второй и третий.
+
+let str4 = '125';
+let arr = str4.split("");
+let sum = 0;
+for (let i = 0; i<arr.length; i++) {
+    sum += Number(arr[i]);
+}
+console.log(sum);
+
+//Дана строка из 6-ти цифр. 
+//Проверьте, что сумма первых трех цифр равняется сумме 
+//вторых трех цифр. 
+//Если это так - выведите 'да', в противном случае выведите 'нет'.
+
+ let str10 = "230456"
+ let arr2 = str10.split('');
+ arr3 = arr2.map(Number);
+ let res1 = arr3[0] + arr3[1] + arr3[2];
+ let res2 = arr3[3] + arr3[4] + arr3[5];
+ if (res1 == res2) {
+     console.log('Yes');
+ } else {
+    console.log('No'); 
+ }
+ 
+ //в массиве есть обьекты с товарами, 
+ //у них может быть свойство "акция". 
+ //вывести в консоль только те товары, у которых она есть
+ 
+ let array = [
+    { name: 'dress', type: 'sale'},
+    { name: 'suit', type: 'new'},
+    { name: 'trousers', type: 'sale'},
+    { name: 'djeans', type: 'new'},
+    { name: 'boot', type: 'sale'},
+ ];
+ array.sort(function (a, b) {
+     if (a.type == 'sale') {
+         console.log(a.name)
+     }
+ })
