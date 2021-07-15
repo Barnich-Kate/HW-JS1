@@ -1,3 +1,97 @@
+class Machine {
+  constructor(name, power) {
+    this.enabled = false;
+    this.name = name;
+    this.power = power;
+  }
+  Characteristics() {
+    if(this.enabled === true) {
+      console.log(`${name} with power ${power}W is turned on`);
+    }
+    
+  }
+}
+let fridge = new Machine('Samsung', 8);
+fridge.enable();
+
+class Coffemaker extends Machine {
+  constructor (name, power, waterAmount) {
+    super(name, power);
+    this.name = name;
+    this.power = power;
+    this.waterAmount = waterAmount;
+  }
+  enable () {
+    super.Characteristics;
+    this.heat();
+  }
+
+
+  heat () {
+    setTimeout(function(){
+      console.log('Кофеварка нагрелась');
+    },100);
+  }
+  getPower () {
+    console.log(power);
+  }
+  run() {
+    if(this.enabled){
+      if(this._waterAmount >= 30){
+        setTimeout(function(){
+          console.log('Coffee is ready!');
+        },1000);
+      }
+      else{
+        console.warn('Не достаточно воды');
+      }
+    }  
+  }
+  }
+  waterAmount (amount) {
+    if(this.amount === undefined){
+      console.log(this._waterAmount);
+    }
+    else{
+      if(typeof(this.amount) !== 'number'){
+        console.error('Сыпем гвозди...');
+        return false;
+      }
+      if(this.amount + this._waterAmount > waMAX){
+        console.error('Облились!');
+      }
+      else if(this.amount < 0){
+        console.error('Эта вода непригодна для полива цветов!');
+      }
+      else{
+        this._waterAmount += this.amount;
+        console.log(`Текущее количество воды - ${this._waterAmount}мл.`);
+      }
+    }
+  }
+
+
+let cm = new CoffeeMaker('Saeco', 10, 1000);
+cm.enable();
+cm.run();
+
+cm.waterAmount(100);
+cm.waterAmount();
+cm.waterAmount(-100);
+cm.waterAmount(1100);
+cm.waterAmount();
+cm.waterAmount(350);
+cm.waterAmount('skldfjdslk');
+cm.run();
+  
+
+
+
+
+
+
+
+
 //Напишите функцию, которая проверяет, 
 //является ли элемент именно простым объектом, 
 //а не массивом, null и т.п.
