@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    background: #f1f1f1;
+    padding: 10px;
+}
+
+.header-pic {
+    width: 100%;
+}
+
+.main-title {
+    text-transform: uppercase;
+    color: #222;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 26px;
+}
+
+h2 {
+    color: blueviolet;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.canvas {
+    width: 800px;
+    height: 1000px;
+    background-image: url('../images/bg.png');
+    background-color: white;
+    margin: 30px 50px auto 100px;
+    position: relative;
+}
+
+.img-1 {
+    position: absolute;
+    margin-top: 250px;
+    left: 50px;   
+}
+
+.img-2 {
+    position: absolute;
+    margin-top: 250px;
+    left: 300px;   
+}
+
+.img-3 {
+    position: absolute;
+    margin-top: 250px;
+    left: 550px;   
+}
+
+.slogan {
+    top: 150px;
+    left: 50px;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.second-slogan {
+    right: 38px;
+    top: 722px;
+    position: absolute;
+    color: black;
+    text-transform: lowercase;
+}

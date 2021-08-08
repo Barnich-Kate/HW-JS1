@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    background: #f1f1f1;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #222;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 26px;
+}
+
+h2 {
+    text-transform: uppercase; 
+    text-align: center;
+    margin: 30px auto;
+    font-size: 26px;
+    color: #3b0b99;
+}
+
+.wrap {
+    width: 700px;
+    height: 250px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.t-1 {
+    width: 150px;
+    height: 150px;
+    background: orangered;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.wrap2 {
+    width: 700px;
+    height: 250px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.t1 {
+    width: 150px;
+    height: 150px;
+    background: orangered;
+    float: left;
+}
+
+.t-2 {
+    width: 150px;
+    height: 150px;
+    background: violet;
+    float: left;    
+}
+
+.wrap3 {
+    width: 700px;
+    height: 250px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.tt1 {
+    width: 350px;
+    height: 150px;
+    background: orangered;
+    float: left;
+}
+
+.t2 {
+    width: 350px;
+    height: 150px;
+    background: violet;
+    float: right;    
+}
+
+.wrap4 {
+    width: 700px;
+    height: 150px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.t4 {
+    width: 350px;
+    height: 150px;
+    background: orangered;
+    float: left;
+}
+
+.t-4 {
+    width: 350px;
+    height: 150px;
+    background: violet;
+    float: right;    
+}
+
+.wrap5 {
+    width: 900px;
+    height: 300px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.t5 {
+    width: 450px;
+    height: 150px;
+    background: orangered;
+    float: left;
+}
+
+.t-5 {
+    width: 450px;
+    height: 150px;
+    background: violet;
+    float: right;    
+}
+
+.b3 {
+    width: 300px;
+    height: 150px;
+    background: greenyellow;
+    float: left;    
+}
+
+.b-3 {
+    width: 300px;
+    height: 150px;
+    background: blueviolet;
+    float: left;    
+}
+
+.b33 {
+    width: 300px;
+    height: 150px;
+    background: rgb(30, 182, 111);
+    float: right;    
+}
+
+.wrap6 {
+    width: 900px;
+    height: 200px;
+    border: 3px solid green;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    width: 900px;
+    background: coral;
+}
+
+.aside {
+    width: 30%;
+    float: left;
+    background: lightseagreen;
+}
+
+.main {
+    width: 70%;
+    float: right;
+    background: royalblue;
+}
+
+.footer {
+    height: 100px;
+    background: seagreen;
+}
