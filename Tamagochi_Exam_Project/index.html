@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagochi</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+            <div class="progress-bar">
+                <h2>Progress</h2>
+                <p><img src="./img/icons8-веганская-еда-48.png" alt="food" class="feed"> <span id="counter_eat">100%</span></p>
+                <p><img src="./img/icons8-сон-48.png" alt="sleep" class="sleep"> <span id="counter_sleep">100%</span></p>
+                <p><img src="./img/icons8-детский-горшок-48.png" alt="pee" class="pee"> <span id="counter_pee">100%</span></p>
+            </div>
+        </div>
+        
+
+        <div class="character">
+            <img src="./img/remove.gif" alt="Tamy">
+        </div>
+
+        <div class="buttons">
+            <button id="button_sleep">Sleep</button>
+        </div>
+
+        <div class="buttons">
+            <button id="button_eat">Eat</button>
+        </div>
+            
+        <div class="buttons">
+            <button id="button_pee">Pee</button>
+        </div>
+
+        <div class="indicator">
+			<div class="progressbar">
+				<div id="progress_sleep"></div>
+				<span class="count"></span>
+			</div>
+		</div>
+
+		<div class="indicator">
+			<div class="progressbar">
+				<div id="progress_eat"></div>
+				<span class="count"></span>
+			</div>
+		</div>
+
+		<div class="indicator">
+			<div class="progressbar">
+				<div id="progress_pee"></div>
+				<span class="count"></span>
+			</div>
+		</div> 
+
+    </div>  
+    <script src="./pet.js"></script>  
+    <script src="./script.js"></script>
+</body>
+</html>
